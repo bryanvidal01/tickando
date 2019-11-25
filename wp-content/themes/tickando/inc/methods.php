@@ -13,3 +13,5 @@ function dateMonthInFr( $date ) {
     $french_months = array('Janv', 'Févr', 'Mars', 'Avr', 'Mai', 'Juin', 'Juil', 'Août', 'Sept', 'Oct', 'Nov', 'Déc');
     return str_replace($english_months, $french_months,  $date );
 }
+
+
