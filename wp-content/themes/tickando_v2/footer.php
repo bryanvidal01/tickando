@@ -20,7 +20,7 @@
                 <div class="row">
                     <div class="col-sm-12 text-center">
                         <div class="legals">
-                            <?php echo __('©Tickando 2020 - Mentions légales', 'lsd_lang'); ?>
+                            <?php echo __('© Tickando 2020', 'lsd_lang'); ?>
                         </div>
                     </div>
                 </div>
