@@ -12543,8 +12543,13 @@ p.white {
     text-align: center;
     display: block;
   }
+
+  /* line 427, ../sass/style.scss */
+  footer .legals {
+    text-align: center;
+  }
 }
-/* line 427, ../sass/style.scss */
+/* line 433, ../sass/style.scss */
 .logo-container {
   position: fixed;
   width: 100%;
@@ -12552,7 +12557,7 @@ p.white {
   background: #222;
   z-index: 1500;
 }
-/* line 434, ../sass/style.scss */
+/* line 440, ../sass/style.scss */
 .logo-container .logo {
   position: absolute;
   left: 50%;
@@ -12562,24 +12567,24 @@ p.white {
   text-align: center;
 }
 
-/* line 446, ../sass/style.scss */
+/* line 452, ../sass/style.scss */
 .fadeIn {
   opacity: 0;
 }
 
-/* line 451, ../sass/style.scss */
+/* line 457, ../sass/style.scss */
 .header-home .wording,
 .info-eligibility {
   transition: .6s;
 }
 
-/* line 457, ../sass/style.scss */
+/* line 463, ../sass/style.scss */
 :root {
   --size: calc(var(--border) * 12);
   --border: 2px;
 }
 
-/* line 462, ../sass/style.scss */
+/* line 468, ../sass/style.scss */
 .loader {
   margin: 0 auto;
   margin-top: 10px;
