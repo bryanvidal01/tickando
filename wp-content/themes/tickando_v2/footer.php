@@ -16,9 +16,7 @@
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="">
                         </a>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12 text-center">
+                    <div class="col-sm-4 text-right">
                         <div class="legals">
                             <?php echo __('© Tickando 2020', 'lsd_lang'); ?>
                         </div>
