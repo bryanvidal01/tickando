@@ -20,7 +20,7 @@ $aboutUsImageURL = lsd_get_thumb($aboutUsImage, 'full');
 $parcoursItems = get_field('item_parcours');
 
 ?>
-  <div class="header-home" style="background-image: url('<?php echo $imageBackgroundURL; ?>');">
+  <div class="header-home" id="slider" data-type="background" data-speed="2" style="background-image: url('<?php echo $imageBackgroundURL; ?>');">
     <div class="content-left">
         <?php if($titleTop): ?>
             <p class="wording white fadeIn"><?php echo $titleTop; ?></p>
@@ -30,9 +30,9 @@ $parcoursItems = get_field('item_parcours');
         <div class="info-eligibility fadeIn">
             <?php echo $subTitle; ?>
 
-            <a href="mailto:<?php echo $adressMail; ?>" class="button blue">
-                <?php echo __('Tester mon éligibilité', 'lsd_lang'); ?>
-            </a>
+            <!--<a href="mailto:<?php /*echo $adressMail; */?>" class="button blue">
+                <?php /*echo __('Tester mon éligibilité', 'lsd_lang'); */?>
+            </a>-->
         </div>
         <?php endif; ?>
     </div>

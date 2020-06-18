@@ -7,7 +7,7 @@
                     <div class="col-sm-4">
                         <ul class="nav-footer">
                             <li>
-                                <a href="mailto:<?php echo $adressMail; ?>" class="button blue"><?php echo __('Contact', 'lsd_lang'); ?></a>
+                                <a href="mailto:<?php echo $adressMail; ?>" ><?php echo __('Contact', 'lsd_lang'); ?></a>
                             </li>
                         </ul>
                     </div>
@@ -27,6 +27,7 @@
 
         <script  src='<?php echo get_template_directory_uri();?>/assets/js/jquery.js'></script>
         <script  src='<?php echo get_template_directory_uri();?>/assets/js/app.js'></script>
+        <script  src='<?php echo get_template_directory_uri();?>/assets/js/jquery.easeScroll.js'></script>
         <?php wp_footer(); ?>
 
     </body>

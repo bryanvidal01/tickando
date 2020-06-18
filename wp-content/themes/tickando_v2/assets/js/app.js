@@ -1,5 +1,24 @@
 $(document).ready(function(){
+    $("html").easeScroll({
+        frameRate: 70,
+        animationTime: 1000,
+        stepSize: 40,
+    });
 
+    function parallax() {
+        var $slider = document.getElementById("slider");
+
+        var yPos = window.pageYOffset / $slider.dataset.speed;
+        yPos = -yPos;
+
+        var coords = '0% '+ yPos + 'px';
+
+        $slider.style.backgroundPosition = coords;
+    }
+
+    window.addEventListener("scroll", function(){
+        parallax();
+    });
 });
 
 window.onload = function() {
