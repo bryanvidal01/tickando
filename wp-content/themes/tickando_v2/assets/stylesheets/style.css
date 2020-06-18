@@ -12119,14 +12119,20 @@ a.text-dark:focus, a.text-dark:hover {
 body {
   font-family: 'Roboto', sans-serif;
   text-decoration: none;
+  transition: .3s;
 }
 
-/* line 10, ../sass/style.scss */
+/* line 11, ../sass/style.scss */
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+/* line 17, ../sass/style.scss */
 .pipedriveWebForms iframe {
   max-width: 100% !important;
 }
 
-/* line 15, ../sass/style.scss */
+/* line 22, ../sass/style.scss */
 .header {
   padding: 40px 30px;
   position: absolute;
@@ -12135,39 +12141,22 @@ body {
   top: 0;
   z-index: 400;
 }
-/* line 22, ../sass/style.scss */
+/* line 29, ../sass/style.scss */
 .header .logo {
-  width: 200px;
+  width: 202px;
   display: block;
 }
-/* line 26, ../sass/style.scss */
+/* line 34, ../sass/style.scss */
 .header .logo img {
   width: 100%;
 }
-/* line 31, ../sass/style.scss */
-.header .navigation {
-  display: block;
-  text-align: right;
-}
-/* line 34, ../sass/style.scss */
-.header .navigation li {
-  display: inline-block;
-  padding: 19px 15px;
-}
-/* line 37, ../sass/style.scss */
-.header .navigation li a {
-  display: block;
-  color: #FFF;
-  font-weight: 200;
-  letter-spacing: -.01em;
-}
 
-/* line 48, ../sass/style.scss */
+/* line 41, ../sass/style.scss */
 img {
   max-width: 100%;
 }
 
-/* line 52, ../sass/style.scss */
+/* line 45, ../sass/style.scss */
 .header-home {
   width: 100%;
   height: 100vh;
@@ -12175,11 +12164,11 @@ img {
   background-position: center;
   position: relative;
 }
-/* line 60, ../sass/style.scss */
+/* line 53, ../sass/style.scss */
 .header-home.not-home {
   height: 50vh;
 }
-/* line 63, ../sass/style.scss */
+/* line 56, ../sass/style.scss */
 .header-home.not-home .content-center {
   position: absolute;
   top: 50%;
@@ -12189,7 +12178,7 @@ img {
   text-align: center;
   transform: translateY(-50%);
 }
-/* line 77, ../sass/style.scss */
+/* line 70, ../sass/style.scss */
 .header-home:before {
   content: '';
   position: absolute;
@@ -12198,30 +12187,81 @@ img {
   height: 100%;
   width: 100%;
   z-index: 2;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.7);
+}
+/* line 81, ../sass/style.scss */
+.header-home .wording {
+  font-size: 35px;
+  font-weight: 100;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  line-height: 45px;
 }
 /* line 88, ../sass/style.scss */
-.header-home .wording {
-  font-size: 57px;
-  font-weight: 800;
-  margin-bottom: 20px;
-  line-height: 54px;
+.header-home .wording strong {
+  background: #2378cb;
+  padding: 4px 10px 2px;
+  font-weight: 600;
 }
-/* line 95, ../sass/style.scss */
+/* line 97, ../sass/style.scss */
 .header-home .content-left {
   position: absolute;
-  left: 40px;
-  bottom: 40px;
-  max-width: 45%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 580px;
   color: #FFF;
   z-index: 30;
+  text-align: center;
 }
-/* line 105, ../sass/style.scss */
+/* line 107, ../sass/style.scss */
+.header-home .content-left .info-eligibility {
+  display: inline-block;
+  text-align: left;
+  padding-top: 20px;
+}
+/* line 111, ../sass/style.scss */
+.header-home .content-left .info-eligibility p {
+  color: #FFF;
+  margin-bottom: 0;
+}
+/* line 114, ../sass/style.scss */
+.header-home .content-left .info-eligibility p strong {
+  font-size: 25px;
+  font-weight: 500;
+}
+/* line 120, ../sass/style.scss */
+.header-home .content-left .info-eligibility ul {
+  padding-top: 10px;
+}
+/* line 123, ../sass/style.scss */
+.header-home .content-left .info-eligibility ul li {
+  position: relative;
+  margin-bottom: 15px;
+  font-weight: 200;
+  font-size: 18px;
+}
+/* line 128, ../sass/style.scss */
+.header-home .content-left .info-eligibility ul li:before {
+  content: '';
+  display: inline-block;
+  height: 0;
+  width: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 10px solid #2378cb;
+  margin-right: 15px;
+}
+/* line 141, ../sass/style.scss */
+.header-home .content-left .info-eligibility .button {
+  margin-top: 30px;
+}
+/* line 146, ../sass/style.scss */
 .header-home .content-left .sub-wording {
   font-weight: 100;
   margin-bottom: 20px;
 }
-/* line 111, ../sass/style.scss */
+/* line 152, ../sass/style.scss */
 .header-home .content-right {
   position: absolute;
   right: 40px;
@@ -12231,13 +12271,13 @@ img {
   text-align: right;
   color: #FFF;
 }
-/* line 120, ../sass/style.scss */
+/* line 161, ../sass/style.scss */
 .header-home .content-right p {
   font-weight: 100;
   margin-bottom: 20px;
 }
 
-/* line 127, ../sass/style.scss */
+/* line 168, ../sass/style.scss */
 .switch-lang {
   position: absolute;
   right: 0;
@@ -12245,11 +12285,11 @@ img {
   background: #181818;
   padding: 6px;
 }
-/* line 133, ../sass/style.scss */
+/* line 174, ../sass/style.scss */
 .switch-lang li {
   display: inline-block;
 }
-/* line 136, ../sass/style.scss */
+/* line 177, ../sass/style.scss */
 .switch-lang li a {
   color: #FFF;
   font-weight: 500;
@@ -12259,7 +12299,7 @@ img {
   padding: 3px;
   display: block;
 }
-/* line 147, ../sass/style.scss */
+/* line 188, ../sass/style.scss */
 .switch-lang:before {
   content: '';
   display: inline-block;
@@ -12272,152 +12312,281 @@ img {
   left: -21px;
 }
 
-/* line 164, ../sass/style.scss */
+/* line 202, ../sass/style.scss */
+.strate-how-we-are {
+  padding: 170px 0;
+  background-size: cover;
+}
+/* line 206, ../sass/style.scss */
+.strate-how-we-are .container-text {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 50px;
+  padding-left: 180px;
+  max-width: 800px;
+}
+/* line 212, ../sass/style.scss */
+.strate-how-we-are .container-text .title {
+  color: #2378cb;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+/* line 218, ../sass/style.scss */
+.strate-how-we-are .container-text .sub-title {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+/* line 224, ../sass/style.scss */
+.strate-how-we-are .container-text .content p {
+  font-size: 15px;
+}
+/* line 229, ../sass/style.scss */
+.strate-how-we-are .container-text .button {
+  margin-top: 5px;
+}
+
+/* line 237, ../sass/style.scss */
 .strate-about-us {
   padding: 0 0;
   position: relative;
-  background: #F7F7F7;
+  background: #000;
 }
-/* line 168, ../sass/style.scss */
+/* line 242, ../sass/style.scss */
+.strate-about-us .text-container {
+  position: relative;
+  z-index: 30;
+  color: #FFF;
+}
+/* line 247, ../sass/style.scss */
+.strate-about-us .text-container .title {
+  font-size: 30px;
+}
+/* line 251, ../sass/style.scss */
+.strate-about-us .text-container p {
+  color: #FFF;
+  font-weight: 200;
+}
+/* line 256, ../sass/style.scss */
 .strate-about-us .image-strate {
-  width: 50%;
-  right: 0;
-  height: 100%;
-  position: absolute;
-  top: 0;
-}
-/* line 175, ../sass/style.scss */
-.strate-about-us .image-strate img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  margin-top: -300px;
+  text-align: center;
 }
-/* line 183, ../sass/style.scss */
+/* line 260, ../sass/style.scss */
+.strate-about-us .image-strate img {
+  max-width: 100%;
+  display: inline-block;
+}
+/* line 267, ../sass/style.scss */
 .strate-about-us .text-container {
   padding: 90px;
 }
-/* line 186, ../sass/style.scss */
+/* line 270, ../sass/style.scss */
 .strate-about-us .text-container p {
   margin-bottom: 20px;
 }
 
-/* line 193, ../sass/style.scss */
-.strate-number {
-  padding: 60px;
+/* line 276, ../sass/style.scss */
+footer {
+  background: #000;
+  padding: 30px 0;
 }
-/* line 195, ../sass/style.scss */
-.strate-number .item-number {
-  text-align: center;
-  margin-top: 50px;
-}
-/* line 199, ../sass/style.scss */
-.strate-number .item-number .title {
-  margin-bottom: 0px;
-}
-/* line 202, ../sass/style.scss */
-.strate-number .item-number img {
-  width: 90px;
-  margin-bottom: 10px;
-}
-
-/* line 210, ../sass/style.scss */
-.strate-image-full {
-  margin: 60px 0;
-  text-align: center;
-}
-/* line 213, ../sass/style.scss */
-.strate-image-full .image-full {
-  max-width: 100%;
+/* line 280, ../sass/style.scss */
+footer .logo {
+  width: 202px;
   display: inline-block;
 }
-
-/* line 221, ../sass/style.scss */
-.strate-text-image .button {
-  margin-top: 20px;
+/* line 287, ../sass/style.scss */
+footer .nav-footer li a {
+  color: #FFF;
+  font-size: 14px;
+  font-weight: 200;
+}
+/* line 295, ../sass/style.scss */
+footer .legals {
+  padding-top: 25px;
+  color: #FFF;
+  font-weight: 200;
+  font-size: 13px;
 }
 
-/* line 226, ../sass/style.scss */
-.strate-text-image {
-  margin: 60px 0;
-}
-/* line 228, ../sass/style.scss */
-.strate-text-image .title {
-  margin-top: 30px;
-}
-
-/* line 233, ../sass/style.scss */
-.strate-video {
-  margin: 60px 0;
-}
-/* line 235, ../sass/style.scss */
-.strate-video iframe {
-  width: 100%;
-  height: 600px;
-}
-
-/* line 241, ../sass/style.scss */
-.strate-text-center {
-  margin: 60px 0;
-}
-/* line 244, ../sass/style.scss */
-.strate-text-center .button {
-  margin-top: 20px;
-}
-
-/* line 249, ../sass/style.scss */
-.strate-partners {
-  margin: 60px 0;
-}
-/* line 251, ../sass/style.scss */
-.strate-partners .item-partners {
-  margin-top: 30px;
-}
-/* line 253, ../sass/style.scss */
-.strate-partners .item-partners .title {
-  margin-top: 20px;
-}
-/* line 256, ../sass/style.scss */
-.strate-partners .item-partners .button {
-  margin-top: 20px;
-}
-
-/* line 264, ../sass/style.scss */
+/* line 305, ../sass/style.scss */
 .title {
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 12px;
 }
-/* line 269, ../sass/style.scss */
+/* line 310, ../sass/style.scss */
 .title.title-strate {
   font-size: 30px;
 }
 
-/* line 274, ../sass/style.scss */
+/* line 315, ../sass/style.scss */
 p {
   line-height: 24px;
   color: #555;
 }
-/* line 277, ../sass/style.scss */
+/* line 318, ../sass/style.scss */
 p.white {
   color: #FFF;
 }
 
-/* line 282, ../sass/style.scss */
+/* line 323, ../sass/style.scss */
 .button {
-  padding: 17px 30px;
-  border-radius: 40px;
+  padding: 12px 40px;
   display: inline-block;
-  font-weight: 500;
+  font-weight: 200;
   font-size: 14px;
   letter-spacing: .04em;
 }
-/* line 289, ../sass/style.scss */
+/* line 330, ../sass/style.scss */
+.button:hover {
+  text-decoration: none;
+}
+/* line 334, ../sass/style.scss */
 .button.white {
   background: #FFF;
   color: #000;
 }
-/* line 294, ../sass/style.scss */
+/* line 339, ../sass/style.scss */
 .button.black {
   background: #181818;
   color: #FFF;
+}
+/* line 343, ../sass/style.scss */
+.button.blue {
+  background: #2378cb;
+  color: #FFF;
+  transition: .3s;
+}
+/* line 347, ../sass/style.scss */
+.button.blue:hover {
+  background-color: #2065a8;
+}
+
+@media (max-width: 992px) {
+  /* line 356, ../sass/style.scss */
+  .header .logo {
+    margin: 0 auto;
+  }
+
+  /* line 359, ../sass/style.scss */
+  .header-home .wording {
+    font-size: 23px;
+    line-height: 30px;
+    padding: 0 15px;
+  }
+
+  /* line 364, ../sass/style.scss */
+  .header-home .content-left {
+    position: relative;
+    padding-top: 40px;
+    width: 100%;
+  }
+
+  /* line 370, ../sass/style.scss */
+  .header-home .content-left .info-eligibility p strong {
+    font-size: 20px;
+  }
+
+  /* line 374, ../sass/style.scss */
+  .header-home .content-left .info-eligibility ul {
+    margin-top: 15px;
+  }
+  /* line 376, ../sass/style.scss */
+  .header-home .content-left .info-eligibility ul li {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  /* line 383, ../sass/style.scss */
+  .header-home {
+    min-height: 100vh;
+  }
+
+  /* line 389, ../sass/style.scss */
+  .strate-about-us .text-container {
+    padding: 15px;
+  }
+  /* line 392, ../sass/style.scss */
+  .strate-about-us .text-container .title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  /* line 398, ../sass/style.scss */
+  .strate-about-us .image-strate {
+    margin-top: -50px;
+    padding-bottom: 30px;
+  }
+
+  /* line 404, ../sass/style.scss */
+  .strate-how-we-are {
+    padding: 60px 15px;
+  }
+  /* line 407, ../sass/style.scss */
+  .strate-how-we-are .container-text {
+    padding: 20px;
+  }
+  /* line 410, ../sass/style.scss */
+  .strate-how-we-are .container-text .button {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* line 417, ../sass/style.scss */
+  footer .nav-footer li a {
+    text-align: center;
+    display: block;
+  }
+}
+/* line 423, ../sass/style.scss */
+.logo-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  z-index: 1500;
+}
+/* line 430, ../sass/style.scss */
+.logo-container .logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 202px;
+  text-align: center;
+}
+
+/* line 442, ../sass/style.scss */
+.fadeIn {
+  opacity: 0;
+}
+
+/* line 447, ../sass/style.scss */
+.header-home .wording,
+.info-eligibility {
+  transition: .6s;
+}
+
+/* line 453, ../sass/style.scss */
+:root {
+  --size: calc(var(--border) * 12);
+  --border: 2px;
+}
+
+/* line 458, ../sass/style.scss */
+.loader {
+  margin: 0 auto;
+  margin-top: 10px;
+  border: var(--border) solid #FFF;
+  border-top-color: rgba(85, 155, 223, 0.6);
+  border-radius: 50%;
+  width: var(--size);
+  height: var(--size);
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
 }

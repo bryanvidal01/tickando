@@ -5,6 +5,7 @@ Template Name: Homepage
 
 get_header();
 
+$adressMail = get_field('params_mail_address', 'option');
 $imageBackground = get_field('image_background');
 $imageBackgroundURL = lsd_get_thumb($imageBackground, 'full');
 $titleTop = get_field('title_top');
@@ -22,37 +23,25 @@ $parcoursItems = get_field('item_parcours');
   <div class="header-home" style="background-image: url('<?php echo $imageBackgroundURL; ?>');">
     <div class="content-left">
         <?php if($titleTop): ?>
-            <p class="wording white"><?php echo $titleTop; ?></p>
+            <p class="wording white fadeIn"><?php echo $titleTop; ?></p>
         <?php endif; ?>
 
         <?php if($subTitle): ?>
-            <p class="sub-wording white">
-              <?php echo $subTitle; ?>
-            </p>
-        <?php endif; ?>
+        <div class="info-eligibility fadeIn">
+            <?php echo $subTitle; ?>
 
-        <a href="#" class="button white">
-        En savoir plus
-        </a>
-
-    </div>
-
-    <div class="content-right">
-        <div class="title">
-            Vous souhaitez inverstir ?
+            <a href="mailto:<?php echo $adressMail; ?>" class="button blue">
+                <?php echo __('Tester mon éligibilité', 'lsd_lang'); ?>
+            </a>
         </div>
-        <p class="white">Financement de l'économie de la culture…</p>
-
-        <a href="#" class="button white">
-        En savoir plus
-        </a>
+        <?php endif; ?>
     </div>
   </div>
 
 <div class="strate-about-us">
-  <div class="container-fluid">
+  <div class="container">
     <div class="row">
-      <div class="col-sm-6">
+      <div class="col-sm-8 mx-auto text-center">
         <div class="text-container">
             <?php if($aboutUsTitle): ?>
             <div class="title">
@@ -61,16 +50,14 @@ $parcoursItems = get_field('item_parcours');
             <?php endif; ?>
 
             <?php if($aboutUsText): ?>
-            <p>
                 <?php echo $aboutUsText; ?>
-            </p>
             <?php endif; ?>
 
-            <?php if($aboutUsURL): ?>
-            <a href="<?php echo $aboutUsURL; ?>" class="button black">
+            <?php /*if($aboutUsURL): */?><!--
+            <a href="<?php /*echo $aboutUsURL; */?>" class="button black">
                 En savoir plus
             </a>
-            <?php endif; ?>
+            --><?php /*endif; */?>
         </div>
       </div>
     </div>
@@ -80,49 +67,27 @@ $parcoursItems = get_field('item_parcours');
   </div>
 </div>
 
-<?php if($parcoursItems): ?>
-<div class="strate-number">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12 text-center">
-        <div class="title title-strate">
-          Notre parcours
+<?php
+$imageAboutBackground = get_field('about_background');
+$imageAboutBackgroundURL = lsd_get_thumb($imageAboutBackground, 'full');
+$titleAboutTop = get_field('about_title');
+$subTitleAbout = get_field('about_sub_title');
+$contentAbout = get_field('about_text_content');
+?>
+<div class="strate-how-we-are" style="background-image: url('<?php echo $imageAboutBackgroundURL; ?>')">
+    <div class="container-text">
+        <div class="title">
+            <?php echo $titleAboutTop ?>
         </div>
-      </div>
+        <div class="sub-title">
+            <?php echo $subTitleAbout; ?>
+        </div>
+        <div class="content">
+            <?php echo $contentAbout; ?>
 
-        <?php foreach ($parcoursItems as $parcoursItem):
-            $labelParcours = $parcoursItem['label_parcours'];
-            $chiffreParcours = $parcoursItem['chiffre_parcours'];
-            $iconParcours = $parcoursItem['icon_parcours'];
-
-            if($iconParcours):
-                $iconParcoursURL = lsd_get_thumb($iconParcours, 'medium');
-            endif;
-
-        ?>
-          <div class="col-sm-3">
-            <div class="item-number">
-                <?php if(isset($iconParcoursURL)): ?>
-                    <img src="<?php echo $iconParcoursURL; ?>" alt="">
-                <?php endif; ?>
-
-                <?php if($chiffreParcours): ?>
-                  <div class="title">
-                      <?php echo $chiffreParcours; ?>
-                  </div>
-                <?php endif; ?>
-
-                <?php if($labelParcours): ?>
-                    <p><?php echo $labelParcours; ?></p>
-                <?php endif; ?>
-            </div>
-          </div>
-        <?php endforeach; ?>
-
+            <a href="mailto:<?php echo $adressMail; ?>" class="button blue"><?php echo __('Nous contacter', 'lsd_lang'); ?></a>
+        </div>
     </div>
-  </div>
 </div>
-<?php endif; ?>
-
 <?php
 get_footer();

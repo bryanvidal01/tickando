@@ -4,6 +4,13 @@
 body{
 	font-family: 'Roboto', sans-serif;
 	text-decoration: none;
+	transition: .3s;
+}
+
+a{
+	&:hover, &:focus{
+		text-decoration: none;
+	}
 }
 
 .pipedriveWebForms{
@@ -20,26 +27,12 @@ body{
 	top: 0;
 	z-index: 400;
 	.logo{
-		width: 200px;
+		width: 202px;
 		display: block;
+
 
 		img{
 			width: 100%;
-		}
-	}
-
-	.navigation{
-		display: block;
-		text-align: right;
-		li{
-			display: inline-block;
-			padding: 19px 15px;
-			a{
-				display: block;
-				color: #FFF;
-				font-weight: 200;
-				letter-spacing: -.01em;
-			}
 		}
 	}
 }
@@ -82,25 +75,73 @@ img{
 		height: 100%;
 		width: 100%;
 		z-index: 2;
-		background: rgba(#000, .4);
+		background: rgba(#000, .7);
 	}
 
 	.wording{
-		font-size: 57px;
-		font-weight: 800;
+		font-size: 35px;
+		font-weight: 100;
+		text-transform: uppercase;
 		margin-bottom: 20px;
-		line-height: 54px;
+		line-height: 45px;
+
+		strong{
+			background: #2378cb;
+			padding: 4px 10px 2px;
+			font-weight: 600;
+		}
 	}
+
+
 
 	.content-left{
 		position: absolute;
-		left: 40px;
-		bottom: 40px;
-		max-width: 45%;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		max-width: 580px;
 		color: #FFF;
 		z-index: 30;
+		text-align: center;
 
+		.info-eligibility{
+			display: inline-block;
+			text-align: left;
+			padding-top: 20px;
+			p{
+				color: #FFF;
+				margin-bottom: 0;
+				strong{
+					font-size: 25px;
+					font-weight: 500;
+				}
+			}
 
+			ul{
+				padding-top: 10px;
+
+				li{
+					position: relative;
+					margin-bottom: 15px;
+					font-weight: 200;
+					font-size: 18px;
+					&:before{
+						content: '';
+						display : inline-block;
+						height : 0;
+						width : 0;
+						border-top : 6px solid transparent;
+						border-bottom : 7px solid transparent;
+						border-left : 10px solid #2378cb;
+						margin-right: 15px;
+					}
+				}
+			}
+
+			.button{
+				margin-top: 30px;
+			}
+		}
 
 		.sub-wording{
 			font-weight: 100;
@@ -158,24 +199,67 @@ img{
 }
 
 
+.strate-how-we-are{
+	padding: 170px 0;
+	background-size: cover;
+
+	.container-text{
+		background: rgba(#FFF, .85);
+		padding: 50px;
+		padding-left: 180px;
+		max-width: 800px;
+
+		.title{
+			color: #2378cb;
+			margin-bottom: 0;
+			text-transform: uppercase;
+		}
+
+		.sub-title{
+			font-size: 18px;
+			margin-bottom: 20px;
+		}
+
+		.content{
+			p{
+				font-size: 15px;
+			}
+		}
+
+		.button{
+			margin-top: 5px;
+		}
+	}
+}
 
 //Strates
 
 .strate-about-us{
 	padding: 0 0;
 	position: relative;
-	background: #F7F7F7;
-	.image-strate{
-		width: 50%;
-		right: 0;
-		height: 100%;
-		position: absolute;
-		top: 0;
+	background: #000;
 
+	.text-container{
+		position: relative;
+		z-index: 30;
+		color: #FFF;
+
+		.title{
+			font-size: 30px;
+		}
+
+		p{
+			color: #FFF;
+			font-weight: 200;
+		}
+	}
+	.image-strate{
+		width: 100%;
+		margin-top: -300px;
+		text-align: center;
 		img{
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
+			max-width: 100%;
+			display: inline-block;
 		}
 	}
 
@@ -189,73 +273,30 @@ img{
 	}
 }
 
+footer{
+	background: #000;
+	padding: 30px 0;
 
-.strate-number{
-	padding: 60px;
-	.item-number{
-		text-align: center;
-		margin-top: 50px;
-
-		.title{
-			margin-bottom: 0px;
-		}
-		img{
-			width: 90px;
-			margin-bottom: 10px;
-		}
-	}
-}
-
-
-.strate-image-full{
-	margin: 60px 0;
-	text-align: center;
-	.image-full{
-		max-width: 100%;
+	.logo{
+		width: 202px;
 		display: inline-block;
 	}
-}
 
-
-.strate-text-image{
-	.button{
-		margin-top: 20px;
-	}
-}
-
-.strate-text-image{
-	margin: 60px 0;
-	.title{
-		margin-top: 30px;
-	}
-}
-
-.strate-video{
-	margin: 60px 0;
-	iframe{
-		width: 100%;
-		height: 600px;
-	}
-}
-
-.strate-text-center{
-	margin: 60px 0;
-
-	.button{
-		margin-top: 20px;
-	}
-}
-
-.strate-partners{
-	margin: 60px 0;
-	.item-partners{
-		margin-top: 30px;
-		.title{
-			margin-top: 20px;
+	.nav-footer{
+		li{
+			a{
+				color: #FFF;
+				font-size: 14px;
+				font-weight: 200;
+			}
 		}
-		.button{
-			margin-top: 20px;
-		}
+	}
+
+	.legals{
+		padding-top: 25px;
+		color: #FFF;
+		font-weight: 200;
+		font-size: 13px;
 	}
 }
 
@@ -280,12 +321,16 @@ p{
 }
 
 .button{
-	padding: 17px 30px;
-	border-radius: 40px;
+	padding: 12px 40px;
 	display: inline-block;
-	font-weight: 500;
+	font-weight: 200;
 	font-size: 14px;
 	letter-spacing: .04em;
+
+	&:hover{
+		text-decoration: none;
+	}
+
 	&.white{
 		background: #FFF;
 		color: #000;
@@ -294,5 +339,134 @@ p{
 	&.black{
 		background: #181818;
 		color: #FFF;
+	}
+	&.blue{
+		background: #2378cb;
+		color: #FFF;
+		transition: .3s;
+		&:hover{
+			background-color: #2065a8;
+		}
+	}
+}
+
+
+
+@media (max-width: 992px) {
+	.header .logo{
+		margin: 0 auto;
+	}
+	.header-home .wording{
+		font-size: 23px;
+		line-height: 30px;
+		padding: 0 15px;
+	}
+	.header-home .content-left{
+		position: relative;
+		padding-top: 40px;
+		width: 100%;
+	}
+
+	.header-home .content-left .info-eligibility p strong{
+		font-size: 20px;
+	}
+
+	.header-home .content-left .info-eligibility ul{
+		margin-top: 15px;
+		li{
+			font-size: 16px;
+			margin-bottom: 5px;
+
+		}
+	}
+
+	.header-home{
+		min-height: 100vh;
+	}
+
+
+	.strate-about-us{
+		.text-container{
+			padding: 15px;
+
+			.title{
+				font-size: 24px;
+				line-height: 30px;
+			}
+		}
+
+		.image-strate{
+			margin-top: -50px;
+			padding-bottom: 30px;
+		}
+	}
+
+	.strate-how-we-are{
+		padding: 60px 15px;
+
+		.container-text{
+			padding: 20px;
+
+			.button{
+				width: 100%;
+				text-align: center;
+			}
+		}
+	}
+
+	footer .nav-footer li a{
+		text-align: center;
+		display: block;
+	}
+}
+
+.logo-container{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: #222;
+	z-index: 1500;
+
+	.logo{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: 202px;
+		text-align: center;
+	}
+
+}
+// Animations
+
+.fadeIn{
+	opacity: 0;
+}
+
+
+.header-home .wording,
+.info-eligibility{
+	transition: .6s;
+}
+
+
+:root {
+	--size: calc(var(--border) * 12);
+	--border: 2px;
+}
+
+.loader {
+	margin: 0 auto;
+	margin-top: 10px;
+	border: var(--border) solid #FFF;
+	border-top-color: rgba(#559bdf, .6);
+	border-radius: 50%;
+	width: var(--size);
+	height: var(--size);
+	animation: spin 1.2s linear infinite;
+}
+@keyframes spin {
+	to {
+		transform: rotate(1turn);
 	}
 }
