@@ -1,11 +1,7 @@
 $(document).ready(function(){
-    $("html").easeScroll({
-        frameRate: 70,
-        animationTime: 1000,
-        stepSize: 40,
-    });
 
-    function parallax() {
+
+    /*function parallax() {
         var $slider = document.getElementById("slider");
 
         var yPos = window.pageYOffset / $slider.dataset.speed;
@@ -18,7 +14,26 @@ $(document).ready(function(){
 
     window.addEventListener("scroll", function(){
         parallax();
+    });*/
+
+    $("a[href*='#']:not([href='#'])").click(function() {
+        if (
+            location.hostname == this.hostname
+            && this.pathname.replace(/^\//,"") == location.pathname.replace(/^\//,"")
+        ) {
+            var anchor = $(this.hash);
+            anchor = anchor.length ? anchor : $("[name=" + this.hash.slice(1) +"]");
+            if ( anchor.length ) {
+                $("html, body").animate( { scrollTop: anchor.offset().top }, 600);
+            }
+        }
     });
+
+
+    $('.navigation-toggle').click(function(event){
+        $('body').toggleClass('nav-open');
+    });
+
 });
 
 window.onload = function() {

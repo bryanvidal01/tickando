@@ -7,6 +7,8 @@ body{
 	transition: .3s;
 }
 
+$blue: #2378cb;
+
 a{
 	&:hover, &:focus{
 		text-decoration: none;
@@ -21,21 +23,135 @@ a{
 
 .header{
 	padding: 40px 30px;
-	position: absolute;
+	position: relative;
 	width: 100%;
 	left: 0;
 	top: 0;
 	z-index: 400;
-	.logo{
+	background: #000;
+
+
+	.logo {
 		width: 202px;
 		display: block;
 
-
-		img{
+		img {
 			width: 100%;
 		}
 	}
+
 }
+
+.page-template-front-page{
+	.header{
+		background: transparent;
+		position: absolute;
+	}
+}
+
+.intro-presentation{
+	h2{
+		color: #2378cb;
+		font-size: 25px;
+		text-transform: uppercase;
+		font-weight: 600;
+	}
+
+	.big-title-blue{
+		font-size: 40px;
+		color: #2378cb;
+		text-transform: uppercase;
+		font-weight: 600;
+		line-height: 45px;
+	}
+
+	.img-presentation{
+		margin-bottom: 40px;
+	}
+}
+
+.blue{
+	color: #2378cb;
+}
+
+.container-intro{
+	padding: 50px 0;
+	.title{
+		margin-bottom: 0;
+	}
+}
+
+.push-client{
+	background-size: cover;
+	background-position: center;
+	padding: 60px 120px;
+	vertical-align: top;
+	position: relative;
+
+	&:after{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	&.left{
+		text-align: left;
+
+		&:after{
+			background: rgb(0,0,0);
+			background: linear-gradient(260deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+		}
+	}
+
+	&.right{
+		text-align: right;
+
+		&:after{
+			background: rgb(0,0,0);
+			background: linear-gradient(-260deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+		}
+	}
+
+	.name-client{
+		font-weight: 800;
+	}
+
+
+	.image-client{
+		height: 200px;
+		width: 200px;
+		overflow: hidden;
+		display: inline-block;
+		border-radius: 50%;
+		vertical-align: middle;
+		position: relative;
+		z-index: 3;
+
+		img{
+			object-fit: cover;
+			height: 100%;
+		}
+	}
+
+	.info-client{
+		display: inline-block;
+		width: 350px;
+		color: #FFF;
+		margin: 0 30px;
+		vertical-align: middle;
+		position: relative;
+		z-index: 3;
+		p{
+			color: #FFF;
+			font-style: italic;
+			font-weight: 200;
+		}
+	}
+}
+
 
 
 img{
@@ -45,11 +161,10 @@ img{
 .header-home{
 	width: 100%;
 	height: 100vh;
-	background-size: auto 120%;
 	background-position: center;
 	background-attachment: fixed;
 	position: relative;
-	background-position: 0 0;
+	background-size: cover;
 
 
 	&.not-home{
@@ -234,6 +349,191 @@ img{
 	}
 }
 
+
+.sub-title-general{
+	font-size: 22px;
+}
+
+
+.strate-affiliation{
+	margin-bottom: 60px;
+	.title{
+		margin-bottom: 0;
+		font-size: 35px;
+	}
+
+	.sub-title-general{
+		margin-bottom: 10px;
+	}
+
+	p{
+		display: block;
+		margin: 0 auto;
+		max-width: 300px;
+		font-size: 14px;
+	}
+
+	a{
+		margin-top: 30px;
+	}
+}
+
+
+.item-question-response{
+	.title-question{
+		font-size: 30px;
+		color: $blue;
+
+		.number{
+			font-weight: 800;
+		}
+	}
+}
+
+.image-faq{
+	width: 100%;
+	height: 500px;
+	object-fit: cover;
+	overflow: hidden;
+	img{
+		display: block;
+		overflow: hidden;
+		object-fit: cover;
+		height: 100%;
+	}
+}
+
+.buttons-inline{
+	a{
+		margin: 0 15px;
+	}
+}
+
+.navigation-toggle{
+	position: absolute;
+	right: 40px;
+	top: 50px;
+	background: transparent;
+	border: 0;
+	width: 40px;
+	padding: 15px 0;
+
+	&:focus{
+		outline: none;
+	}
+	.barre{
+		width: 100%;
+		height: 2px;
+		background: #fff;
+		transition: .3s;
+
+		&:after{
+			content: 'menu';
+			text-transform: uppercase;
+			display: block;
+			color: #FFF;
+			font-size: 12px;
+			letter-spacing: .04em;
+			position: absolute;
+			text-align: center;
+			width: 100%;
+			top: 100%;
+			margin-top: 5px;
+		}
+	}
+
+	&:before, &:after{
+		content: '';
+		width: 100%;
+		height: 2px;
+		left: 0;
+		background: #FFF;
+		position: absolute;
+		transition: .3s;
+	}
+
+	&:before{
+		top: 0;
+	}
+
+	&:after{
+		bottom: 0;
+	}
+}
+
+.menu-items{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	background: #000;
+	width: 30%;
+	z-index: 30;
+	padding-top: 140px;
+	transform: translateX(100%);
+	transition: .4s;
+
+	ul{
+		li{
+			padding: 4px 0;
+			a{
+				color: #fff;
+				font-size: 17px;
+				padding-left: 70px;
+				position: relative;
+				transition: .3s;
+				font-weight: 200;
+
+				&:before{
+					content: '';
+					width: 60px;
+					height: 1px;
+					background: $blue;
+					position: absolute;
+					left: 0;
+					top: 50%;
+					opacity: 0;
+					transition: .3s;
+				}
+			}
+
+			&:hover, &.current-menu-item{
+				a{
+					color: $blue;
+
+					&:before{
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+}
+
+.nav-open{
+	.navigation-toggle{
+		.barre{
+			background-color: transparent;
+		}
+
+		&:before{
+			top: 50%;
+			transform: rotate(45deg) translateY(-50%);
+		}
+
+		&:after{
+			bottom: 50%;
+			transform: rotate(-45deg) translateY(50%);
+		}
+	}
+
+
+	.menu-items {
+		transform: translateX(0%);
+	}
+
+}
+
 //Strates
 
 .strate-about-us{
@@ -354,6 +654,86 @@ p{
 	}
 }
 
+.marge-top{
+	margin-top: 30px;
+}
+
+.strate-image-full{
+	padding: 120px 0;
+	text-align: right;
+	background-size: cover;
+	background-position: center;
+	margin-top: 50px;
+
+	.text-container{
+		display: inline-block;
+		background: rgba(#FFF, .8);
+		padding: 30px 120px 30px 30px;
+		max-width: 570px;
+		text-align: left;
+
+		p{
+			margin-bottom: 0;
+			font-size: 25px;
+			color: #000;
+			line-height: 35px;
+			strong{
+				color: $blue;
+			}
+		}
+	}
+}
+
+.strate-key-number{
+	margin-top: 30px;
+	margin-bottom: 60px;
+}
+
+.item-partner{
+	display: inline-block;
+	vertical-align: bottom;
+	width: 32%;
+	padding: 30px;
+
+	img{
+		margin-bottom: 30px;
+	}
+
+	a{
+		color: #000;
+		text-decoration: underline;
+	}
+}
+
+.inner-category{
+	margin-bottom: 40px;
+}
+
+.key-number{
+	text-align: center;
+	vertical-align: middle;
+	margin-top: 60px;
+	margin-bottom: 40px;
+	padding: 0 30px;
+
+	.number{
+		font-size: 30px;
+	}
+
+	&.star{
+		margin-top: 0;
+		.number{
+			color: $blue;
+			font-size: 90px;
+			line-height: 120px;
+		}
+
+		.label{
+			text-transform: uppercase;
+		}
+	}
+}
+
 
 
 @media (max-width: 992px) {
@@ -428,6 +808,11 @@ p{
 			text-align: center;
 		}
 	}
+
+	.header-home{
+		background-attachment: scroll;
+	}
+
 }
 
 .logo-container{

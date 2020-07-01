@@ -30,15 +30,15 @@ $parcoursItems = get_field('item_parcours');
         <div class="info-eligibility fadeIn">
             <?php echo $subTitle; ?>
 
-            <!--<a href="mailto:<?php /*echo $adressMail; */?>" class="button blue">
-                <?php /*echo __('Tester mon éligibilité', 'lsd_lang'); */?>
-            </a>-->
+            <a href="#tickando-about" class="button blue">
+                <?php echo __('En savoir plus', 'lsd_lang'); ?>
+            </a>
         </div>
         <?php endif; ?>
     </div>
   </div>
 
-<div class="strate-about-us">
+<div class="strate-about-us" id="tickando-about">
   <div class="container">
     <div class="row">
       <div class="col-sm-8 mx-auto text-center">

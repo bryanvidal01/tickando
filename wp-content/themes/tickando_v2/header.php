@@ -26,11 +26,15 @@
                     <img src="<?php echo get_template_directory_uri();?>/assets/images/logo.png" />
                 </a>
             </div>
-            <!--<div class="hidden col-sm-8">
-                <div class="navigation">
-                    <?php /*echo wp_nav_menu(); */?>
-                </div>
-            </div>-->
         </div>
     </div>
+    <button class="navigation-toggle">
+        <div class="barre"></div>
+    </button>
 </header>
+
+<div class="menu-items">
+    <div class="navigation">
+        <?php echo wp_nav_menu(); ?>
+    </div>
+</div>

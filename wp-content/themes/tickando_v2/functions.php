@@ -36,14 +36,14 @@ function scripts_site(){
     }
 }
 
-add_action('template_redirect', 'checkUserConnect');
+/*add_action('template_redirect', 'checkUserConnect');
 function checkUserConnect() {
   $isConnect = is_user_logged_in();
 
   if(!is_user_logged_in() && $isConnect == false):
     wp_redirect(wp_login_url());
   endif;
-}
+}*/
 
 
 function lsd_get_thumb($id, $size){
