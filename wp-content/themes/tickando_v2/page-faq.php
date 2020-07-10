@@ -58,11 +58,11 @@ $page_faq_sub_title_bottom = get_field('page_faq_sub_title_bottom');
                 <?php echo $page_faq_sub_title_bottom; ?>
             </div>
             <div class="buttons-inline marge-top">
-                <a href="" class="button black">
-                    <?php echo __('Nous contacter', 'lsd_lang'); ?>
+                <a href="<?php echo get_the_permalink(PAGE_CONTACT); ?>" class="button black">
+                    <?php echo __('Nous poser une question', 'lsd_lang'); ?>
                 </a>
-                <a href="" class="button blue">
-                    <?php echo __('Nous contacter', 'lsd_lang'); ?>
+                <a href="<?php echo get_the_permalink(PAGE_PRESENTATION); ?>" class="button blue">
+                    <?php echo __('Présentation de Tickando', 'lsd_lang'); ?>
                 </a>
             </div>
         </div>

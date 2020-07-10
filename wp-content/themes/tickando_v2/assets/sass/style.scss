@@ -22,7 +22,7 @@ a{
 }
 
 .header{
-	padding: 40px 30px;
+	padding: 24px;
 	position: relative;
 	width: 100%;
 	left: 0;
@@ -32,7 +32,7 @@ a{
 
 
 	.logo {
-		width: 202px;
+		width: 125px;
 		display: block;
 
 		img {
@@ -40,12 +40,115 @@ a{
 		}
 	}
 
+
 }
 
-.page-template-front-page{
+.wpml-ls-display{
+	display: none;
+}
+
+.wpml-ls-current-language{
+	margin-top: 30px;
+	border-top: 1px solid #222;
+	a{
+		display: none;
+		font-weight: 800;
+	}
+
+	.sub-menu{
+		a{
+			display: block;
+			font-weight: 800;
+		}
+	}
+}
+
+.page-template-front-page, .page-template-votre-evenement{
 	.header{
 		background: transparent;
 		position: absolute;
+	}
+}
+
+.page-template-votre-evenement{
+	.header-home{
+		height: auto;
+		position: relative;
+
+		.content-left{
+			position: relative;
+			padding: 180px 60px 140px;
+			max-width: 100%;
+			left: 0;
+			top: 0;
+			transform: translate(0, 0);
+			text-align: center;
+			vertical-align: top;
+
+			.title{
+				text-transform: uppercase;
+				margin-bottom: 40px;
+			}
+
+			.info-eligibility{
+				display: inline-block;
+				vertical-align: top;
+				padding: 0 40px;
+
+				p{
+					strong{
+						color: $blue;
+						font-size: 17px;
+						font-weight: 600;
+						text-transform: uppercase;
+					}
+				}
+			}
+		}
+	}
+
+	.strate-about-us{
+		background: #FFF;
+		.text-container{
+			.title{
+				color: #000;
+				font-size: 40px;
+				line-height: 45px;
+				font-weight: 400;
+				text-transform: uppercase;
+				strong{
+					color: $blue;
+					font-weight: 600;
+				}
+			}
+
+			p{
+				color: #000;
+			}
+		}
+
+		.image-strate{
+			margin-top: -230px;
+		}
+	}
+
+
+	.strate-how-we-are{
+		.container-text{
+			margin: 0 auto;
+			padding: 30px;
+			max-width: 400px;
+		}
+	}
+}
+
+
+.container-blue{
+	background: #f1f8fe;
+	padding: 40px;
+
+	&.contact{
+		margin-top: 15px;
 	}
 }
 
@@ -71,7 +174,11 @@ a{
 }
 
 .blue{
-	color: #2378cb;
+	color: $blue;
+
+	p{
+		color: $blue;
+	}
 }
 
 .container-intro{
@@ -409,6 +516,10 @@ img{
 	}
 }
 
+.strate-question-event{
+	margin: 40px 0 90px 0;
+}
+
 .navigation-toggle{
 	position: absolute;
 	right: 40px;
@@ -468,7 +579,7 @@ img{
 	right: 0;
 	background: #000;
 	width: 30%;
-	z-index: 30;
+	z-index: 34;
 	padding-top: 140px;
 	transform: translateX(100%);
 	transition: .4s;
@@ -580,7 +691,8 @@ footer{
 	padding: 30px 0;
 
 	.logo{
-		width: 202px;
+		width: 150px;
+		padding-top: 20px;
 		display: inline-block;
 	}
 
@@ -601,6 +713,22 @@ footer{
 		color: #FFF;
 		font-weight: 200;
 		font-size: 13px;
+		text-align: center;
+		max-width: 270px;
+		margin-left: auto;
+		p{
+			color: #FFF;
+			margin-top: 15px;
+			line-height: 16px;
+		}
+
+	}
+
+	.copyright{
+		color: #FFF;
+		text-align: center;
+		font-weight: 100;
+		font-size: 14px;
 	}
 }
 
@@ -651,6 +779,11 @@ p{
 		&:hover{
 			background-color: #2065a8;
 		}
+	}
+
+	&.border-white{
+		border: 1px solid #FFF;
+		color: #FFF;
 	}
 }
 
@@ -803,16 +936,63 @@ p{
 		display: block;
 	}
 
-	footer{
-		.legals{
-			text-align: center;
-		}
-	}
+
 
 	.header-home{
 		background-attachment: scroll;
 	}
 
+	.menu-items{
+		width: 100%;
+	}
+
+	.buttons-inline{
+		a{
+			margin-bottom: 30px;
+		}
+	}
+
+	footer .legals{
+		margin-top: 30px;
+		max-width: 100%;
+	}
+
+	body{
+		.text-right{
+			text-align: center !important;
+		}
+	}
+
+	.key-number{
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	.item-partner{
+		width: 100%;
+	}
+
+	.push-client{
+		padding: 30px;
+		text-align: center !important;
+
+		.info-client{
+			width: 100%;
+			margin: 15px 0;
+		}
+	}
+
+	.page-template-votre-evenement .header-home .content-left{
+		padding: 180px 30px 60px;
+
+		.info-eligibility{
+			padding: 0 0;
+		}
+	}
+
+	.page-template-votre-evenement .strate-about-us .image-strate{
+		margin-top: 0;
+	}
 }
 
 .logo-container{

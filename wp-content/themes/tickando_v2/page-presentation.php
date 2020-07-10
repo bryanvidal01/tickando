@@ -56,7 +56,7 @@ $page_presentation_text_end = get_field('page_presentation_text_end');
             <?php echo $page_presentation_sub_description; ?>
         </div>
         <div class="col-sm-12 text-center">
-            <a href="" class="button blue marge-top">
+            <a href="<?php echo get_the_permalink(PAGE_CONTACT); ?>" class="button blue marge-top">
                 <?php echo __('En savoir plus', 'lsd_lang'); ?>
             </a>
         </div>
@@ -112,7 +112,7 @@ $page_presentation_text_end = get_field('page_presentation_text_end');
         </div>
 
         <div class="col-sm-12 text-center">
-            <a href="" class="button black marge-top">
+            <a href="<?php echo get_the_permalink(PAGE_PARTENAIRES); ?>" class="button black marge-top">
                 <?php echo __('Découvrez tous nos partenaires', 'lsd_lang'); ?>
             </a>
         </div>

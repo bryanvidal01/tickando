@@ -2,8 +2,15 @@
 define('THEME_DIR', get_template_directory() . '/');
 define('THEME_URL', get_template_directory_uri() . '/');
 define('HOME_URL', get_home_url());
-
 define('AJAX_URL', THEME_URL . 'ajax-min.php');
+
+//Correspondance de page
+define('PAGE_PRESENTATION', get_field('params_page_presentation', 'option'));
+define('PAGE_PARTENAIRES', get_field('params_page_partenaires', 'option'));
+define('PAGE_FAQ', get_field('params_page_faq', 'option'));
+define('PAGE_CLIENTS', get_field('params_page_clients', 'option'));
+define('PAGE_EVENTS', get_field('params_page_event', 'option'));
+define('PAGE_CONTACT', get_field('params_page_contact', 'option'));
 
 
 

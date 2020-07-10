@@ -6,25 +6,41 @@ Template Name: Contact
 
 get_header();
 
-
+$contact_page_title = get_field('contact_page_title');
+$contact_form_title = get_field('contact_form_title');
+$contact_form_sub_title = get_field('contact_form_sub_title');
+$contact_form_sub_text = get_field('contact_form_sub_text');
+$contact_form_iframe = get_field('contact_form_iframe');
 ?>
-    <div class="header-home not-home" style="background-image: url('https://images.pexels.com/photos/1916819/pexels-photo-1916819.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');">
-        <div class="content-center">
-          <p class="wording white"><?php echo get_the_title(); ?></p>
-        </div>
-    </div>
-
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <div class="pipedriveWebForms" data-pd-webforms="https://pipedrivewebforms.com/form/8afdd699c9c149f6382048148018eccc5393871"><script src="https://cdn.pipedriveassets.com/web-form-assets/webforms.min.js"></script></div>
+                <div class="title text-center text-uppercase marge-top">
+                    <?php echo $contact_page_title; ?>
+                </div>
             </div>
         </div>
     </div>
+    <div class="container-blue contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <div class="title blue text-uppercase">
+                        <?php echo $contact_form_title; ?>
+                    </div>
+                    <div class="sub-title-general">
+                        <?php echo $contact_form_sub_title; ?>
+                    </div>
+                    <div class="text-form">
+                        <?php echo $contact_form_sub_text; ?>
+                    </div>
 
-
-
-
-
+                    <div class="container-form">
+                        <?php echo $contact_form_iframe; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 <?php
 get_footer();

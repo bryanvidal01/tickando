@@ -30,7 +30,7 @@ $parcoursItems = get_field('item_parcours');
         <div class="info-eligibility fadeIn">
             <?php echo $subTitle; ?>
 
-            <a href="#tickando-about" class="button blue">
+            <a href="<?php echo get_the_permalink(PAGE_PRESENTATION); ?>" class="button blue">
                 <?php echo __('En savoir plus', 'lsd_lang'); ?>
             </a>
         </div>
@@ -53,13 +53,13 @@ $parcoursItems = get_field('item_parcours');
                 <?php echo $aboutUsText; ?>
             <?php endif; ?>
 
-            <?php /*if($aboutUsURL): */?><!--
-            <a href="<?php /*echo $aboutUsURL; */?>" class="button black">
-                En savoir plus
-            </a>
-            --><?php /*endif; */?>
+            <div class="buttons-inline text-center marge-top">
+                <a href="<?php echo get_the_permalink(PAGE_PRESENTATION); ?>" class="button blue"><?php echo __('Découvrir la solution', 'lsd_lang'); ?></a>
+                <!--<a href="" class="button border-white"><?php /*echo __('Tester mon éligibilité', 'lsd_lang'); */?></a>-->
+            </div>
         </div>
       </div>
+
     </div>
   </div>
   <div class="image-strate">
@@ -84,8 +84,7 @@ $contentAbout = get_field('about_text_content');
         </div>
         <div class="content">
             <?php echo $contentAbout; ?>
-
-            <a href="mailto:<?php echo $adressMail; ?>" class="button blue"><?php echo __('Nous contacter', 'lsd_lang'); ?></a>
+            <a href="<?php echo get_the_permalink(PAGE_CONTACT); ?>" class="button blue"><?php echo __('Nous contacter', 'lsd_lang'); ?></a>
         </div>
     </div>
 </div>

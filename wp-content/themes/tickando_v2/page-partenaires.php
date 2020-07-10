@@ -69,8 +69,8 @@ $page_partners_affiliation_text = get_field('page_partners_affiliation_text');
                 <?php echo $page_partners_affiliation_sub_title; ?>
             </div>
             <p><?php echo $page_partners_affiliation_text; ?></p>
-            <a href="" class="button blue">
-                Nous contacter
+            <a href="<?php echo get_the_permalink(PAGE_CONTACT); ?>" class="button blue">
+                <?php echo __('Nous contacter', 'lsd_lang'); ?>
             </a>
         </div>
     </div>
