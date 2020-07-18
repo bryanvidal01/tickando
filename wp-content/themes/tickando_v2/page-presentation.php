@@ -57,7 +57,7 @@ $page_presentation_text_end = get_field('page_presentation_text_end');
         </div>
         <div class="col-sm-12 text-center">
             <a href="<?php echo get_the_permalink(PAGE_CONTACT); ?>" class="button blue marge-top">
-                <?php echo __('En savoir plus', 'lsd_lang'); ?>
+                <?php echo __('Discutez avec nous', 'lsd_lang'); ?>
             </a>
         </div>
     </div>

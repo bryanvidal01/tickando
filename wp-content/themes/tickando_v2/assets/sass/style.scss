@@ -1040,6 +1040,11 @@ p{
 	height: var(--size);
 	animation: spin 1.2s linear infinite;
 }
+
+.cn-button.bootstrap{
+	background: $blue !important;
+}
+
 @keyframes spin {
 	to {
 		transform: rotate(1turn);

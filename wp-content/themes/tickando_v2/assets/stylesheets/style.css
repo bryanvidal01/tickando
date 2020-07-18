@@ -13161,6 +13161,11 @@ p.white {
   animation: spin 1.2s linear infinite;
 }
 
+/* line 1044, ../sass/style.scss */
+.cn-button.bootstrap {
+  background: #2378cb !important;
+}
+
 @keyframes spin {
   to {
     transform: rotate(1turn);

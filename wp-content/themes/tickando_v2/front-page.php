@@ -30,9 +30,10 @@ $parcoursItems = get_field('item_parcours');
         <div class="info-eligibility fadeIn">
             <?php echo $subTitle; ?>
 
-            <a href="<?php echo get_the_permalink(PAGE_PRESENTATION); ?>" class="button blue">
-                <?php echo __('En savoir plus', 'lsd_lang'); ?>
+            <a href="<?php echo get_the_permalink(PAGE_EVENTS); ?>" class="button blue">
+                <?php echo __('Découvrir la solution', 'lsd_lang'); ?>
             </a>
+
         </div>
         <?php endif; ?>
     </div>
@@ -54,8 +55,8 @@ $parcoursItems = get_field('item_parcours');
             <?php endif; ?>
 
             <div class="buttons-inline text-center marge-top">
-                <a href="<?php echo get_the_permalink(PAGE_PRESENTATION); ?>" class="button blue"><?php echo __('Découvrir la solution', 'lsd_lang'); ?></a>
-                <!--<a href="" class="button border-white"><?php /*echo __('Tester mon éligibilité', 'lsd_lang'); */?></a>-->
+                <a href="<?php echo get_the_permalink(PAGE_PRESENTATION); ?>" class="button blue"><?php echo __('En savoir plus', 'lsd_lang'); ?></a>
+                <a href="<?php echo get_the_permalink(PAGE_CONFIGURATEUR); ?>" class="button border-white"><?php echo __('Tester mon éligibilité', 'lsd_lang'); ?></a>
             </div>
         </div>
       </div>

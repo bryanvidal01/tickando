@@ -11,6 +11,7 @@ define('PAGE_FAQ', get_field('params_page_faq', 'option'));
 define('PAGE_CLIENTS', get_field('params_page_clients', 'option'));
 define('PAGE_EVENTS', get_field('params_page_event', 'option'));
 define('PAGE_CONTACT', get_field('params_page_contact', 'option'));
+define('PAGE_CONFIGURATEUR', get_field('params_page_configurateur', 'option'));
 
 
 
@@ -43,14 +44,14 @@ function scripts_site(){
     }
 }
 
-/*add_action('template_redirect', 'checkUserConnect');
+add_action('template_redirect', 'checkUserConnect');
 function checkUserConnect() {
   $isConnect = is_user_logged_in();
 
   if(!is_user_logged_in() && $isConnect == false):
     wp_redirect(wp_login_url());
   endif;
-}*/
+}
 
 
 function lsd_get_thumb($id, $size){

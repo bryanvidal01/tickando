@@ -19,7 +19,7 @@
                     </div>
                     <div class="col-sm-4 text-center">
                         <a href="<?php echo get_site_url(); ?>" class="logo">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" width="120" alt="">
                         </a>
                     </div>
                     <div class="col-sm-4 text-right">

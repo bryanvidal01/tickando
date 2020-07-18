@@ -56,7 +56,7 @@ $parcoursItems = get_field('item_parcours');
                 <?php echo $aboutUsText; ?>
             <?php endif; ?>
 
-            <!--<a href="" class="blue button">Tester mon éligibilité</a>-->
+            <a href="<?php echo get_the_permalink(PAGE_CONFIGURATEUR); ?>" class="blue button"><?php echo __('Tester mon éligibilité', 'lsd_lang'); ?></a>
         </div>
       </div>
     </div>
