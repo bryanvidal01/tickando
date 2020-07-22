@@ -24,9 +24,9 @@
                     </div>
                     <div class="col-sm-4 text-right">
                         <div class="legals">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/acpr.jpg" width="90" alt="">
+                            <img src="https://acpr.banque-france.fr/sites/all/themes/bdf_acpr/logo.svg" width="50" alt="">
                             <p>
-                                <?php echo __('Tickando en tant qu’agent de paiement à l’agrément de la Banque de France.', 'lsd_lang'); ?>
+                                <?php echo __('Tickando est agréé par l’ACPR en qualité d’agent prestataire de services de paiement', 'lsd_lang'); ?>
                             </p>
                         </div>
                     </div>

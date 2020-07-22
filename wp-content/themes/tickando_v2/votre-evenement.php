@@ -38,6 +38,10 @@ $parcoursItems = get_field('item_parcours');
                 <?php echo $subTitle2; ?>
             </div>
         <?php endif; ?>
+
+        <div class="marge-top">
+            <a href="<?php echo get_the_permalink(PAGE_CLIENTS); ?>" class="button white"><?php echo __('Témoignages clients', 'lsd_lang'); ?></a>
+        </div>
     </div>
   </div>
 

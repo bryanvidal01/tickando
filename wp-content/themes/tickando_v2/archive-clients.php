@@ -16,6 +16,9 @@ get_header();
                 <div class="sub-title blue">
                     <?php echo __('Et bientôt vous aussi ?', 'lsd_lang'); ?>
                 </div>
+                <div class="marge-top">
+                    <a href="<?php echo get_the_permalink(PAGE_CONFIGURATEUR); ?>" class="button blue"><?php echo __('Rejoignez les !', 'lsd_lang'); ?></a>
+                </div>
             </div>
         </div>
     </div>
