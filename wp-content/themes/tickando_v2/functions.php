@@ -44,7 +44,7 @@ function scripts_site(){
     }
 }
 
-add_action('template_redirect', 'checkUserConnect');
+//add_action('template_redirect', 'checkUserConnect'); // à mettre en commentaire pour MEP
 function checkUserConnect() {
   $isConnect = is_user_logged_in();
 

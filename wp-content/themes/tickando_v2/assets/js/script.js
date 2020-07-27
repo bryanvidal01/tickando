@@ -13,7 +13,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 			array_pourcentages_avance_treso: [10,20,40],
 			pourcentage_avance_treso: 10,
 			selected_pourcentages_avance_treso: null,
-			pourcentage_x: 0.85,
+			pourcentage_x: 0.90,
 		},
 		computed: {
 			result_avance_treso: function () {
@@ -21,7 +21,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 				return result;
 			},
 			pourcentage_honoraire_tickando: function() {
-				let honoraires_tickando_euros = this.montant_previsionnel*this.pourcentage_avance_treso/100*0.15;
+				let honoraires_tickando_euros = this.montant_previsionnel*this.pourcentage_avance_treso/100*0.10;
 				let honoraires_tickando_pourcentage = honoraires_tickando_euros*100/this.montant_previsionnel;
 				return honoraires_tickando_pourcentage;
 			}

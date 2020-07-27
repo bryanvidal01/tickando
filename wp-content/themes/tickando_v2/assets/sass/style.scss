@@ -690,6 +690,24 @@ footer{
 	background: #000;
 	padding: 30px 0;
 
+	a{
+		color: #FFF;
+
+		&:hover{
+			color: #FFF;
+			text-decoration: underline;
+		}
+	}
+
+	p{
+		color: #FFF;
+		font-size: 14px;
+	}
+
+	.footer-logo{
+		display: inline-block;
+		background: #FFF;
+	}
 	.logo{
 		width: 150px;
 		padding-top: 20px;
@@ -956,6 +974,7 @@ p{
 		margin-top: 30px;
 		max-width: 100%;
 	}
+
 
 	body{
 		.text-right{
